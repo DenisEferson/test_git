@@ -1,17 +1,10 @@
-{
-    "name": "testegit",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keyword": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "express": "^4.16.3"
-    }
-}
+const express = require('express');
+const app = express();
 
+app.get('/', (req, res) => {
+    res.status(200).send({ message: 'Olá mundo estou funcionando!' });
+})
 
+app.listen(3001, () => {
+    console.log('API rodando na porta 3001');
+})
